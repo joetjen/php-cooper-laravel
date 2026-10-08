@@ -39,7 +39,7 @@ Instructions for AI agents working in this PHP codebase.
 ## Coding style
 
 - Follow `.editorconfig` (4-space indent, PSR-12). `declare(strict_types=1)` in every PHP file.
-- Target PHP 8.2+ (`composer.json`'s `require.php`) and Laravel 11 and 12.
+- Target PHP 8.2+ (`composer.json`'s `require.php`) and Laravel 11, 12 and 13 (13 needs PHP 8.3).
 - Classes that are not part of the public API are marked `@internal`.
 
 ## Git workflow

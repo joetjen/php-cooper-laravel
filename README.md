@@ -52,7 +52,7 @@ underneath the document. `php artisan config:cache` keeps working.
 ## Installation
 
 Nothing is patched automatically. Every step below is one you make
-yourself and can see in your diff. The steps assume a Laravel 11 or 12
+yourself and can see in your diff. The steps assume a Laravel 11, 12 or 13
 application with the standard `bootstrap/app.php`, on PHP 8.2 or later.
 
 ### 1. Require the package
