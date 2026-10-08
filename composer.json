@@ -15,26 +15,10 @@
   "support": {
     "issues": "http://github.com/joetjen/php-cooper-laravel/issues"
   },
-  "repositories": [
-    {
-      "type": "path",
-      "url": "../php-cooper-config",
-      "options": {
-        "symlink": true
-      }
-    },
-    {
-      "type": "path",
-      "url": "../php-cooper",
-      "options": {
-        "symlink": true
-      }
-    }
-  ],
   "require": {
     "php": "^8.2",
-    "joetjen/cooper": "dev-main",
-    "joetjen/cooper-config": "dev-main",
+    "joetjen/cooper": "^0.1",
+    "joetjen/cooper-config": "^0.1",
     "illuminate/config": "^11.0 || ^12.0",
     "illuminate/console": "^11.0 || ^12.0",
     "illuminate/contracts": "^11.0 || ^12.0",

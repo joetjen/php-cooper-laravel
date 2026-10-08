@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06c1ad0f8de0225af2d8f7e8c8423b30",
+    "content-hash": "763de52c44b936bd7f6ee72195e24f36",
     "packages": [
         {
             "name": "brick/math",
@@ -1063,11 +1063,17 @@
         },
         {
             "name": "joetjen/cooper",
-            "version": "dev-main",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/joetjen/php-cooper.git",
+                "reference": "9521957d318df5ca269a42a3968e3c399066d273"
+            },
             "dist": {
-                "type": "path",
-                "url": "../php-cooper",
-                "reference": "47131c7cbb2b7d153400bee82b276415af8fa2f6"
+                "type": "zip",
+                "url": "https://api.github.com/repos/joetjen/php-cooper/zipball/9521957d318df5ca269a42a3968e3c399066d273",
+                "reference": "9521957d318df5ca269a42a3968e3c399066d273",
+                "shasum": ""
             },
             "require": {
                 "ext-bcmath": "*",
@@ -1085,29 +1091,7 @@
                     "JOetjen\\Cooper\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "JOetjen\\Cooper\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "phpunit"
-                ],
-                "test:coverage": [
-                    "phpunit --coverage-text"
-                ],
-                "analyse": [
-                    "phpstan analyse src --level=8"
-                ],
-                "precommit": [
-                    "@analyse",
-                    "@test"
-                ],
-                "docs": [
-                    "docker run --rm -v $(pwd):/data phpdoc/phpdoc:3"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -1127,24 +1111,28 @@
                 "dotenv"
             ],
             "support": {
-                "issues": "http://github.com/joetjen/php-cooper/issues"
+                "issues": "http://github.com/joetjen/php-cooper/issues",
+                "source": "https://github.com/joetjen/php-cooper/tree/v0.1.0"
             },
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "time": "2026-10-08T18:27:15+00:00"
         },
         {
             "name": "joetjen/cooper-config",
-            "version": "dev-main",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/joetjen/php-cooper-config.git",
+                "reference": "03be04b78cbcd3f5682dbf0d8abd92bd77effb5b"
+            },
             "dist": {
-                "type": "path",
-                "url": "../php-cooper-config",
-                "reference": "c23c0bc0d78e457386e33437edd76650b3864694"
+                "type": "zip",
+                "url": "https://api.github.com/repos/joetjen/php-cooper-config/zipball/03be04b78cbcd3f5682dbf0d8abd92bd77effb5b",
+                "reference": "03be04b78cbcd3f5682dbf0d8abd92bd77effb5b",
+                "shasum": ""
             },
             "require": {
                 "composer-runtime-api": "^2.0",
-                "joetjen/cooper": "dev-main",
+                "joetjen/cooper": "^0.1",
                 "php": "^8.2",
                 "symfony/console": "^6.4 || ^7.0 || ^8.0"
             },
@@ -1157,36 +1145,14 @@
             ],
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "JOetjen\\CooperConfig\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
-            },
-            "autoload-dev": {
+                ],
                 "psr-4": {
-                    "JOetjen\\CooperConfig\\Tests\\": "tests/"
+                    "JOetjen\\CooperConfig\\": "src/"
                 }
             },
-            "scripts": {
-                "test": [
-                    "phpunit"
-                ],
-                "test:coverage": [
-                    "phpunit --coverage-text"
-                ],
-                "analyse": [
-                    "phpstan analyse src --level=8"
-                ],
-                "precommit": [
-                    "@analyse",
-                    "@test"
-                ],
-                "docs": [
-                    "docker run --rm -v $(pwd):/data phpdoc/phpdoc:3"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -1205,12 +1171,10 @@
                 "cooper"
             ],
             "support": {
-                "issues": "http://github.com/joetjen/php-cooper-config/issues"
+                "issues": "http://github.com/joetjen/php-cooper-config/issues",
+                "source": "https://github.com/joetjen/php-cooper-config/tree/v0.1.0"
             },
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "time": "2026-10-08T18:34:23+00:00"
         },
         {
             "name": "laravel/framework",
@@ -8963,10 +8927,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "joetjen/cooper": 20,
-        "joetjen/cooper-config": 20
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
