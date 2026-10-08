@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: PHP ${{ matrix.php }}, Laravel ${{ matrix.laravel }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { php: "8.2", laravel: "11.*", testbench: "9.*" }
+          - { php: "8.3", laravel: "12.*", testbench: "10.*" }
+          - { php: "8.4", laravel: "12.*", testbench: "10.*" }
+    steps:
+      - uses: actions/checkout@v4
+
+      # joetjen/cooper and joetjen/cooper-config are unpublished;
+      # composer.json finds them through path repositories at
+      # ../php-cooper and ../php-cooper-config.
+      - name: Check out php-cooper and php-cooper-config beside this package
+        run: |
+          git clone --depth 1 https://github.com/joetjen/php-cooper.git ../php-cooper
+          git clone --depth 1 https://github.com/joetjen/php-cooper-config.git ../php-cooper-config
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mbstring, bcmath
+          coverage: none
+
+      - name: Validate composer.json
+        run: composer validate --strict
+
+      # Laravel 11 is past its security support, and Composer refuses
+      # every 11.x release over advisories. The package still supports
+      # it, so its tests still run against it.
+      - name: Allow Laravel releases with security advisories
+        if: matrix.laravel == '11.*'
+        run: composer config policy.advisories.block false
+
+      # Updated rather than installed from the lock: the lock pins one
+      # Laravel major, and each matrix entry tests another.
+      - name: Install dependencies
+        run: |
+          composer require --no-update \
+            "laravel/framework:${{ matrix.laravel }}" \
+            "illuminate/config:${{ matrix.laravel }}" \
+            "illuminate/console:${{ matrix.laravel }}" \
+            "illuminate/contracts:${{ matrix.laravel }}" \
+            "illuminate/support:${{ matrix.laravel }}"
+          composer require --dev --no-update "orchestra/testbench:${{ matrix.testbench }}"
+          composer update --prefer-dist --no-progress
+
+      - name: Static analysis
+        run: composer run analyse
+
+      - name: Test
+        run: composer test
