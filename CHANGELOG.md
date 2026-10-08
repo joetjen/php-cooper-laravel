@@ -11,6 +11,8 @@ Planned as `0.1.0`, the first release.
 
 ### Added
 
+- Laravel 11, 12 and 13 (Laravel 13 on PHP 8.3 or later), with
+  `orchestra/testbench` 9, 10 and 11 to test against them.
 - `Bootstrap\LoadConfiguration`, bound in `bootstrap/app.php` in place
   of Laravel's: `config/config.casc` fills the configuration
   repository, and `config/*.php` is not read.

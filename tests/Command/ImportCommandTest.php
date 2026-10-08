@@ -193,7 +193,10 @@ final class ImportCommandTest extends IntegrationTestCase
         $env = '';
         preg_match_all('~^  ([A-Z_][A-Z0-9_]*)$~m', $output, $m);
         self::assertContains('ASSET_URL', $m[1]);
-        foreach ($m[1] as $name) {
+        // APP_NAME is set below, to the value asserted. Laravel 13's
+        // skeleton requires it too (broadcasting's `client_id` reads it
+        // with no default), and a second line would win over that one.
+        foreach (array_diff($m[1], ['APP_NAME']) as $name) {
             $env .= "{$name}=set-for-the-test\n";
         }
         $this->project->write('.env', "APP_NAME=Migrated\n{$env}");

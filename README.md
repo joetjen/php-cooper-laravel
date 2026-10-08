@@ -1,7 +1,7 @@
 # php-cooper-laravel
 
-The Laravel integration of [Cooper](../php-cooper). A
-[CASC](../php-cooper/casc/CASC.md) document replaces Laravel's
+The Laravel integration of [Cooper](https://github.com/joetjen/php-cooper). A
+[CASC](https://github.com/joetjen/php-cooper/blob/main/casc/CASC.md) document replaces Laravel's
 configuration: `config/config.casc` fills the configuration repository,
 and `config/*.php` is no longer read. Cooper also reads the `.env`
 files.
@@ -52,7 +52,7 @@ underneath the document. `php artisan config:cache` keeps working.
 ## Installation
 
 Nothing is patched automatically. Every step below is one you make
-yourself and can see in your diff. The steps assume a Laravel 11 or 12
+yourself and can see in your diff. The steps assume a Laravel 11, 12 or 13
 application with the standard `bootstrap/app.php`, on PHP 8.2 or later.
 
 ### 1. Require the package
@@ -61,10 +61,7 @@ application with the standard `bootstrap/app.php`, on PHP 8.2 or later.
 composer require joetjen/cooper-laravel
 ```
 
-`joetjen/cooper` and `joetjen/cooper-config` come with it. Until they
-are published, all three live side by side and are found through
-Composer `path` repositories (`../php-cooper`, `../php-cooper-config`,
-`../php-cooper-laravel`) in your application's `composer.json`.
+`joetjen/cooper` and `joetjen/cooper-config` come with it.
 
 Laravel discovers `CooperServiceProvider`, which puts the `cooper:*`
 commands on artisan. If your application turns package discovery off,
