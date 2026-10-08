@@ -1,0 +1,62 @@
+{
+  "name": "joetjen/cooper-laravel",
+  "description": "Laravel integration of Cooper: the configuration repository filled from a CASC document, .env files read by Cooper, and cooper:import to move config/*.php into CASC.",
+  "keywords": ["casc", "cooper", "config", "configuration", "laravel"],
+  "type": "library",
+  "homepage": "http://github.com/joetjen/php-cooper-laravel",
+  "minimum-stability": "stable",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Jan Oetjen",
+      "email": "joetjen.riveting388@passmail.net"
+    }
+  ],
+  "support": {
+    "issues": "http://github.com/joetjen/php-cooper-laravel/issues"
+  },
+  "require": {
+    "php": "^8.2",
+    "joetjen/cooper": "^0.1",
+    "joetjen/cooper-config": "^0.1",
+    "illuminate/config": "^11.0 || ^12.0 || ^13.0",
+    "illuminate/console": "^11.0 || ^12.0 || ^13.0",
+    "illuminate/contracts": "^11.0 || ^12.0 || ^13.0",
+    "illuminate/support": "^11.0 || ^12.0 || ^13.0",
+    "laravel/framework": "^11.0 || ^12.0 || ^13.0",
+    "nikic/php-parser": "^5.0",
+    "symfony/console": "^7.0 || ^8.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^9.0 || ^10.0 || ^11.0",
+    "phpstan/phpstan": "^2.2",
+    "phpunit/phpunit": "^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "JOetjen\\CooperLaravel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "JOetjen\\CooperLaravel\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "JOetjen\\CooperLaravel\\CooperServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "test:coverage": "phpunit --coverage-text",
+    "analyse": "phpstan analyse --level=8",
+    "precommit": ["@analyse", "@test"],
+    "docs": "docker run --rm -v $(pwd):/data phpdoc/phpdoc:3"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
