@@ -35,7 +35,7 @@ reading configuration does not change: `config('app.name')`,
 defaults and each package's `mergeConfigFrom()` defaults still sit
 underneath the document. `php artisan config:cache` keeps working.
 
-**Status: 0.1.0, pre-release.** See [CHANGELOG.md](CHANGELOG.md).
+**Status: 0.2.0, pre-release.** See [CHANGELOG.md](CHANGELOG.md).
 
 ## Contents
 
