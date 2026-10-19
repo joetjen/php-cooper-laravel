@@ -17,8 +17,8 @@
   },
   "require": {
     "php": "^8.2",
-    "joetjen/cooper": "^0.1",
-    "joetjen/cooper-config": "^0.1",
+    "joetjen/cooper": "^0.2",
+    "joetjen/cooper-config": "^0.3",
     "illuminate/config": "^11.0 || ^12.0 || ^13.0",
     "illuminate/console": "^11.0 || ^12.0 || ^13.0",
     "illuminate/contracts": "^11.0 || ^12.0 || ^13.0",

@@ -98,6 +98,17 @@ final class PhpConfigTranslatorTest extends TestCase
         self::assertSame(['prefix'], $translation->viaPhp);
     }
 
+    public function testAClassConcatenatedIntoAStringIsPhpNotAnInterpolatedModule(): void
+    {
+        // Interpolated, `!module("Foo.Bar")` reads as `Foo.Bar` (CASC.md
+        // §7, joetjen/cooper 0.2); PHP's `Foo\Bar::class` is the
+        // class-string. Only `!php` keeps the backslashes.
+        $translation = self::translate("['v' => 'x-' . Foo\\Bar::class]");
+
+        self::assertSame('v = !php("""\'x-\' . \\Foo\\Bar::class""")', self::body($translation));
+        self::assertSame(['v'], $translation->viaPhp);
+    }
+
     public function testAnArrayWhoseKeysAreNotLiteralIsPhpAsAWhole(): void
     {
         $translation = self::translate("['options' => [PDO::ATTR_TIMEOUT => 5, 'x' => 1]]");
