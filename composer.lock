@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba1f14cddedfa814fa6e9c9c40b8a969",
+    "content-hash": "bd8194d3e2c2c69b49f6bd5b1cdfbcfc",
     "packages": [
         {
             "name": "brick/math",
@@ -1060,16 +1060,16 @@
         },
         {
             "name": "joetjen/cooper",
-            "version": "v0.1.0",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/joetjen/php-cooper.git",
-                "reference": "9521957d318df5ca269a42a3968e3c399066d273"
+                "reference": "690d940fe7602f2be3355abb08c975cbb02d3d42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joetjen/php-cooper/zipball/9521957d318df5ca269a42a3968e3c399066d273",
-                "reference": "9521957d318df5ca269a42a3968e3c399066d273",
+                "url": "https://api.github.com/repos/joetjen/php-cooper/zipball/690d940fe7602f2be3355abb08c975cbb02d3d42",
+                "reference": "690d940fe7602f2be3355abb08c975cbb02d3d42",
                 "shasum": ""
             },
             "require": {
@@ -1109,27 +1109,27 @@
             ],
             "support": {
                 "issues": "http://github.com/joetjen/php-cooper/issues",
-                "source": "https://github.com/joetjen/php-cooper/tree/v0.1.0"
+                "source": "https://github.com/joetjen/php-cooper/tree/v0.2.0"
             },
-            "time": "2026-10-08T18:27:15+00:00"
+            "time": "2026-10-19T00:00:54+00:00"
         },
         {
             "name": "joetjen/cooper-config",
-            "version": "v0.1.0",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/joetjen/php-cooper-config.git",
-                "reference": "03be04b78cbcd3f5682dbf0d8abd92bd77effb5b"
+                "reference": "ec59a63a00bfe7146b24ac5b8bb76e4bb6bc4ccf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joetjen/php-cooper-config/zipball/03be04b78cbcd3f5682dbf0d8abd92bd77effb5b",
-                "reference": "03be04b78cbcd3f5682dbf0d8abd92bd77effb5b",
+                "url": "https://api.github.com/repos/joetjen/php-cooper-config/zipball/ec59a63a00bfe7146b24ac5b8bb76e4bb6bc4ccf",
+                "reference": "ec59a63a00bfe7146b24ac5b8bb76e4bb6bc4ccf",
                 "shasum": ""
             },
             "require": {
                 "composer-runtime-api": "^2.0",
-                "joetjen/cooper": "^0.1",
+                "joetjen/cooper": "^0.2",
                 "php": "^8.2",
                 "symfony/console": "^6.4 || ^7.0 || ^8.0"
             },
@@ -1169,9 +1169,9 @@
             ],
             "support": {
                 "issues": "http://github.com/joetjen/php-cooper-config/issues",
-                "source": "https://github.com/joetjen/php-cooper-config/tree/v0.1.0"
+                "source": "https://github.com/joetjen/php-cooper-config/tree/v0.3.0"
             },
-            "time": "2026-10-08T18:34:23+00:00"
+            "time": "2026-10-19T07:25:28+00:00"
         },
         {
             "name": "laravel/framework",
