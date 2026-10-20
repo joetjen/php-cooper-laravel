@@ -1,6 +1,6 @@
 {
   "name": "joetjen/cooper-laravel",
-  "description": "Laravel integration of Cooper: the configuration repository filled from a CASC document, .env files read by Cooper, and cooper:import to move config/*.php into CASC.",
+  "description": "Under heavy development: not for production use before 1.0.0. Laravel integration of Cooper: the configuration repository filled from a CASC document, .env files read by Cooper, and cooper:import to move config/*.php into CASC.",
   "keywords": ["casc", "cooper", "config", "configuration", "laravel"],
   "type": "library",
   "homepage": "http://github.com/joetjen/php-cooper-laravel",

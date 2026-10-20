@@ -1,5 +1,11 @@
 # php-cooper-laravel
 
+> [!WARNING]
+> **Under heavy development: not for production use before `1.0.0`.**
+> Things can and will break, and the specification can and will change,
+> between any two releases until `1.0.0`. Do not use this library in a
+> production system yet.
+
 The Laravel integration of [Cooper](https://github.com/joetjen/php-cooper). A
 [CASC](https://github.com/joetjen/php-cooper/blob/main/casc/CASC.md) document replaces Laravel's
 configuration: `config/config.casc` fills the configuration repository,
