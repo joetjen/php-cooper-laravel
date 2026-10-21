@@ -1060,16 +1060,16 @@
         },
         {
             "name": "joetjen/cooper",
-            "version": "v0.2.0",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/joetjen/php-cooper.git",
-                "reference": "690d940fe7602f2be3355abb08c975cbb02d3d42"
+                "reference": "2d9dce5bf46fdbc2cf77b6ba02e88a1d34fb7711"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joetjen/php-cooper/zipball/690d940fe7602f2be3355abb08c975cbb02d3d42",
-                "reference": "690d940fe7602f2be3355abb08c975cbb02d3d42",
+                "url": "https://api.github.com/repos/joetjen/php-cooper/zipball/2d9dce5bf46fdbc2cf77b6ba02e88a1d34fb7711",
+                "reference": "2d9dce5bf46fdbc2cf77b6ba02e88a1d34fb7711",
                 "shasum": ""
             },
             "require": {
@@ -1098,7 +1098,7 @@
                     "email": "joetjen.riveting388@passmail.net"
                 }
             ],
-            "description": "Loads CASC config files -- a hierarchical, extensible config language with imports, variables, interpolation, loops, and consumer-registered resolvers/tags -- into native PHP values, secrets redacted by default.",
+            "description": "Under heavy development: not for production use before 1.0.0. Loads CASC config files -- a hierarchical, extensible config language with imports, variables, interpolation, loops, and consumer-registered resolvers/tags -- into native PHP values, secrets redacted by default.",
             "homepage": "http://github.com/joetjen/php-cooper",
             "keywords": [
                 "casc",
@@ -1109,22 +1109,22 @@
             ],
             "support": {
                 "issues": "http://github.com/joetjen/php-cooper/issues",
-                "source": "https://github.com/joetjen/php-cooper/tree/v0.2.0"
+                "source": "https://github.com/joetjen/php-cooper/tree/v0.2.1"
             },
-            "time": "2026-10-19T00:00:54+00:00"
+            "time": "2026-10-21T04:55:34+00:00"
         },
         {
             "name": "joetjen/cooper-config",
-            "version": "v0.3.0",
+            "version": "v0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/joetjen/php-cooper-config.git",
-                "reference": "ec59a63a00bfe7146b24ac5b8bb76e4bb6bc4ccf"
+                "reference": "80514f077ec9e5990ccde2e370ed6e5ec9d07f03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joetjen/php-cooper-config/zipball/ec59a63a00bfe7146b24ac5b8bb76e4bb6bc4ccf",
-                "reference": "ec59a63a00bfe7146b24ac5b8bb76e4bb6bc4ccf",
+                "url": "https://api.github.com/repos/joetjen/php-cooper-config/zipball/80514f077ec9e5990ccde2e370ed6e5ec9d07f03",
+                "reference": "80514f077ec9e5990ccde2e370ed6e5ec9d07f03",
                 "shasum": ""
             },
             "require": {
@@ -1159,7 +1159,7 @@
                     "email": "joetjen.riveting388@passmail.net"
                 }
             ],
-            "description": "Loads an application's CASC configuration once, at startup, with joetjen/cooper -- converted into plain PHP values, secrets handled by a per-application policy, compiled to an opcache-friendly PHP file between requests.",
+            "description": "Under heavy development: not for production use before 1.0.0. Loads an application's CASC configuration once, at startup, with joetjen/cooper -- converted into plain PHP values, secrets handled by a per-application policy, compiled to an opcache-friendly PHP file between requests.",
             "homepage": "http://github.com/joetjen/php-cooper-config",
             "keywords": [
                 "casc",
@@ -1169,9 +1169,9 @@
             ],
             "support": {
                 "issues": "http://github.com/joetjen/php-cooper-config/issues",
-                "source": "https://github.com/joetjen/php-cooper-config/tree/v0.3.0"
+                "source": "https://github.com/joetjen/php-cooper-config/tree/v0.3.1"
             },
-            "time": "2026-10-19T07:25:28+00:00"
+            "time": "2026-10-21T04:56:37+00:00"
         },
         {
             "name": "laravel/framework",
